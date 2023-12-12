@@ -4,20 +4,20 @@
    - Navigate to the Azure Portal.
    - In the left sidebar, click on "Resource groups" and then "Add."
    - Provide the name as RG1, select a region, and complete the creation process.
-<img src="https://i.imgur.com/gT3hdwS.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/gT3hdwS.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
 
 2. **Create Virtual Machine (VM1) in RG1:**
    - In the RG1, click on "Add" and search for "Virtual machine."
    - Fill in details for VM1 (e.g., Windows 10, 2 vCPUs, 16 GiB Memory), create a username and password.
    - Note the Network Name as VM1-vnet.
    - Complete the creation and wait for deployment.
-<img src="https://i.imgur.com/VBoa0lN.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/VBoa0lN.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
 
 3. **Access VM1 Using RDP:**
    - Obtain the public IP of VM1 from the Azure Portal.
    - Open Remote Desktop, paste VM1's IP, and log in with the provided credentials.
    - Complete the setup to access the desktop.
-<img src="https://i.imgur.com/vKLNO17.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/vKLNO17.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
 
 
 4. **Create Test Folder and Document on VM1:**
@@ -25,9 +25,9 @@
    - Create a new folder named "TEST FOLDER."
    - Inside "TEST FOLDER," create a new text document called "TEST DOC."
    - Type something in the document and save.
-<img src="https://i.imgur.com/1jatCSz.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/uOrFAO2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/Gu3gQ49.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/1jatCSz.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/uOrFAO2.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Gu3gQ49.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
 
 5. **Adjust Sharing Settings on VM1:**
    - Right-click on "TEST FOLDER" in documents, click properties.
@@ -42,16 +42,16 @@
    - In advanced settings, create new inbound rules.
    - Rule 1: Port, TCP, Type 445. Name: Allow NetBIOs Inbound
    - Rule 2: Port, UDP, Type 137-138. Name: Allow SMB Inbound
-<img src="https://i.imgur.com/upenZp9.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/USHUBjb.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/SrTdYnN.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/upenZp9.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/USHUBjb.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/SrTdYnN.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
 <img src="https://i.imgur.com/30fQt7c.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 
 
 7. **Create VM2 Using Same Settings:**
    - Repeat the VM creation process for VM2 in RG1, using the same settings.
    - Ensure VM2 is part of the VM1-vnet network.
-<img src="https://i.imgur.com/v6Bp021.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/v6Bp021.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
 
    
 8. **Access VM2 Using RDP:**
@@ -66,8 +66,8 @@
    - Open File Explorer, paste the shared file pathway ("\\VM1\TEST FOLDER").
    - Open "TEST DOC" and confirm it matches what was created in VM1.
    - Attempt to change the contents of the shared text file and save the file. Note that there are not the correct permissions to perform this action.
-<img src="https://i.imgur.com/dFFQWhJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/ORuV8ov.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/dFFQWhJ.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/ORuV8ov.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
 
 
 11. **Change Permissions on TEST DOC:**
@@ -80,13 +80,13 @@
    - Go back to VM2, open "TEST DOC," type something, and save.
    - Confirm the ability to edit and save the file.
    - Open VM1, open "TEST DOC," and confirm the changes were made.
-<img src="https://i.imgur.com/2uD2SU2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/2uD2SU2.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
 
 
 13. **Delete Resource Group:**
    - In the Azure Portal, navigate to "Resource groups," select RG1, and delete it.
-<img src="https://i.imgur.com/ssCMavZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/fTFwEEq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/ssCMavZ.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/fTFwEEq.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
 
 
 These steps should guide you through the process of creating virtual machines in Azure, enabling file sharing, and adjusting file permissions.
