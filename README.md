@@ -1,4 +1,23 @@
-### Steps to Create Resource Group (RG1) and Two Virtual Machines (VM1 and VM2) in Azure and How to Edit the Network and Sharing Settings to Allow for Filesharing Between the Virtual Machines
+<p align="center">
+<img src="https://i.imgur.com/cwFHBT5.png" alt="Microsoft Azure Logo"/>
+</p>
+
+<h1>Filesharing Between Virtual Machines</h1>
+This tutorial outlines the creation of two virtual machines within Azure and how to adjust firewall and network settings to allow filesharing between the virtual machines.<br />
+
+
+
+<h2>Environments and Technologies Used</h2>
+
+- Microsoft Azure (Virtual Machines/Compute)
+- Remote Desktop
+
+<h2>Operating Systems Used </h2>
+
+- Windows 10 (21H2)
+
+<h2>High-Level Deployment and Configuration Steps</h2>
+<h3>Steps to Create Resource Group (RG1) and Two Virtual Machines (VM1 and VM2) in Azure and How to Edit the Network and Sharing Settings to Allow for Filesharing Between the Virtual Machines</h3>
 
 1. **Create Resource Group (RG1):**
    - Navigate to the Azure Portal.
@@ -89,4 +108,4 @@
 <img src="https://i.imgur.com/fTFwEEq.png" height="100%" width="100%" alt="Disk Sanitization Steps"/>
 
 
-These steps should guide you through the process of creating virtual machines in Azure, enabling file sharing, and adjusting file permissions.
+<h3>These steps should guide you through the process of creating virtual machines in Azure, enabling file sharing, and adjusting file permissions.</h3>
