@@ -85,7 +85,8 @@
 
 13. **Delete Resource Group:**
    - In the Azure Portal, navigate to "Resource groups," select RG1, and delete it.
-<img src="https://i.imgur.com/VBoa0lN.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/ssCMavZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/fTFwEEq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
-These steps should guide you through the process of creating virtual machines in Azure, enabling file sharing, adjusting file permissions, and noting limitations in direct content changes between VM1 and VM2.
+These steps should guide you through the process of creating virtual machines in Azure, enabling file sharing, and adjusting file permissions.
