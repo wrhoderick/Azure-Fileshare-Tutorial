@@ -9,7 +9,7 @@ This tutorial outlines the creation of two virtual machines within Azure and how
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
+- Microsoft Azure (Virtual Machines)
 - Remote Desktop
 
 <h2>Operating Systems Used </h2>
