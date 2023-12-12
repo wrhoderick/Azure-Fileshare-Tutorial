@@ -11,6 +11,7 @@ This tutorial outlines the creation of two virtual machines within Azure and how
 
 - Microsoft Azure (Virtual Machines)
 - Remote Desktop
+- Windows Firewall
 
 <h2>Operating Systems Used </h2>
 
