@@ -1,55 +1,65 @@
-<p align="center">
-<img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
-</p>
+### Steps to Create Resource Group (RG1) and Two Virtual Machines (VM1 and VM2) in Azure
 
-<h1>osTicket - Prerequisites and Installation</h1>
-This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.<br />
+1. **Create Resource Group (RG1):**
+   - Navigate to the Azure Portal.
+   - In the left sidebar, click on "Resource groups" and then "Add."
+   - Provide the name as RG1, select a region, and complete the creation process.
 
+2. **Create Virtual Machine (VM1) in RG1:**
+   - In the RG1, click on "Add" and search for "Virtual machine."
+   - Fill in details for VM1 (e.g., Windows 10, 2 vCPUs, 16 GiB Memory), create a username and password.
+   - Note the Network Name as VM1-vnet.
+   - Complete the creation and wait for deployment.
 
-<h2>Video Demonstration</h2>
+3. **Access VM1 Using RDP:**
+   - Obtain the public IP of VM1 from the Azure Portal.
+   - Open Remote Desktop, paste VM1's IP, and log in with the provided credentials.
+   - Complete the setup to access the desktop.
 
-- ### [YouTube: How To Install osTicket with Prerequisites](https://www.youtube.com)
+4. **Create Test Folder and Document on VM1:**
+   - Open File Explorer and go to documents.
+   - Create a new folder named "TEST FOLDER."
+   - Inside "TEST FOLDER," create a new text document called "TEST DOC."
+   - Type something in the document and save.
 
-<h2>Environments and Technologies Used</h2>
+5. **Adjust Sharing Settings on VM1:**
+   - Right-click on "TEST FOLDER" in documents, click properties.
+   - Click Advanced Sharing, check the share box, and click apply.
+   - Note the file pathway (e.g., "\\VM1\TEST FOLDER").
 
-- Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
-- Internet Information Services (IIS)
+6. **Change Firewall Settings and Create Inbound Rules on VM1:**
+   - Open Windows Firewall, allow file and printer sharing over the network.
+   - In "Allow an app or feature through Windows Defender Firewall," ensure "File and Printer Sharing" is enabled for both "Private" and "Public."
+   - In advanced settings, create new inbound rules.
+   - Rule 1: Port, TCP, Type 445.
+   - Rule 2: Port, UDP, Type 137-138.
 
-<h2>Operating Systems Used </h2>
+7. **Create VM2 Using Same Settings:**
+   - Repeat the VM creation process for VM2 in RG1, using the same settings.
+   - Ensure VM2 is part of the VM1-vnet network.
+   
+8. **Access VM2 Using RDP:**
+   - Obtain the public IP of VM2.
+   - Use RDP to access VM2 using the public IP.
 
-- Windows 10</b> (21H2)
+9. **Change Firewall Settings on VM2:**
+   - Mirror the firewall settings on VM2 as done for VM1.
 
-<h2>List of Prerequisites</h2>
+10. **Access Shared File:**
+   - Open File Explorer, paste the shared file pathway ("\\VM1\TEST FOLDER").
+   - Open "TEST DOC" and confirm it matches what was created in VM1.
+   - Attempt to change the contents of the shared text file and save the file. Note that there are not the correct permissions to perform this action.
 
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
+11. **Change Permissions on TEST DOC:**
+   - Go back to the documents folder in VM1, right-click "TEST FOLDER," click sharing, advanced options, and then permissions.
+   - Check Full Control and click apply.
 
-<h2>Installation Steps</h2>
+12. **Test Permissions Change:**
+   - Go back to VM2, open "TEST DOC," type something, and save.
+   - Confirm the ability to edit and save the file.
+   - Open VM1, open "TEST DOC," and confirm the changes were made.
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+13. **Delete Resource Group:**
+   - In the Azure Portal, navigate to "Resource groups," select RG1, and delete it.
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br /># VM-Creation
+These steps should guide you through the process of creating virtual machines in Azure, enabling file sharing, adjusting file permissions, and noting limitations in direct content changes between VM1 and VM2.
