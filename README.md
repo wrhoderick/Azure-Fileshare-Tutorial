@@ -1,4 +1,4 @@
-### Steps to Create Resource Group (RG1) and Two Virtual Machines (VM1 and VM2) in Azure
+### Steps to Create Resource Group (RG1) and Two Virtual Machines (VM1 and VM2) in Azure and How to Edit the Network and Sharing Settings to Allow for Filesharing Between the Virtual Machines
 
 1. **Create Resource Group (RG1):**
    - Navigate to the Azure Portal.
