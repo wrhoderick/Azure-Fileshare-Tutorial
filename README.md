@@ -15,6 +15,7 @@ This tutorial outlines the creation of two virtual machines within Azure and how
 <h2>Operating Systems Used </h2>
 
 - Windows 10 (21H2)
+- Windows 11 (22H2)
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 <h3>Steps to Create Resource Group (RG1) and Two Virtual Machines (VM1 and VM2) in Azure and How to Edit the Network and Sharing Settings to Allow for Filesharing Between the Virtual Machines</h3>
